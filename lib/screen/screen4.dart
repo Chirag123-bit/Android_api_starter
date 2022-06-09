@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:batch28_api_starter/api/ProductAPI.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -30,6 +31,10 @@ class _ScreenFourState extends State<ScreenFour> {
     }
   }
 
+  uploadImage() {
+    ProductAPI().addProduct(img);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +61,11 @@ class _ScreenFourState extends State<ScreenFour> {
                 child: const Text("Open Gallary"),
               ),
             ],
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Save"),
+          ),
         ],
       ),
     );
