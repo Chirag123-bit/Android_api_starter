@@ -63,7 +63,9 @@ class _ScreenFourState extends State<ScreenFour> {
             ],
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              uploadImage();
+            },
             child: const Text("Save"),
           ),
         ],
